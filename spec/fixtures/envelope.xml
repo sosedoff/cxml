@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cXML SYSTEM "http://xml.cxml.org/schemas/cXML/1.2.014/cXML.dtd">
+<cXML timestamp="2000-12-28T16:56:03-08:00" payloadID="12345666@10.10.83.39">
+<Header>
+<From>
+<Credential domain="DUNS">
+<Identity>123456789</Identity>
+</Credential>
+</From>
+<To>
+<Credential domain="NetworkID">
+<Identity>AN01000000001</Identity>
+</Credential>
+</To>
+<Sender>
+<Credential domain="DUNS">
+<Identity>123456789</Identity>
+<SharedSecret>abracadabra</SharedSecret>
+</Credential>
+</Sender>
+</Header>
+<Request>
+<CatalogUploadRequest operation="new">
+<CatalogName xml:lang="en">Winter Prices</CatalogName>
+<Description xml:lang="en">premiere-level prices</Description>
+<Attachment>
+<URL>cid:part2.PCO28.975@saturn.workchairs.com</URL>
+</Attachment>
+</CatalogUploadRequest>
+</Request>
+</cXML>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cXML SYSTEM "http://xml.cxml.org/schemas/cXML/1.2.014/cXML.dtd">
+<cXML payloadID="123@sendercompany.com"
+timestamp="2003-11-20T23:59:45-07:00">
+<Header>
+<From>
+<!-- Sender -->
+<Credential domain="AribaNetworkUserId">
+<Identity>sender@sendercompany.com</Identity>
+</Credential>
+</From>
+<To>
+<!-- Recipient -->
+<Credential domain="AribaNetworkUserId">
+<Identity>recipient@recipientcompany.com</Identity>
+</Credential>
+</To>
+<Sender>
+<!-- Sender -->
+<Credential domain="AribaNetworkUserId">
+<Identity>sender@sendercompany.com</Identity>
+<SharedSecret>abracadabra</SharedSecret>
+</Credential>
+<UserAgent>Sender Application 1.0</UserAgent>
+</Sender>
+</Header>
+<Request deploymentMode="production">
+<CopyRequest>
+<cXMLAttachment>
+<Attachment>
+<URL>cid:222@sendercompany.com</URL>
+</Attachment>
+</cXMLAttachment>
+</CopyRequest>
+</Request>
+</cXML>

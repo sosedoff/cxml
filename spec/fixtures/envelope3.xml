@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<cXML version="1.2.011" payloadID="1346769469000.process.162998590@officedepot.com" timestamp="2012-09-04T02:37:49-05:00">
+  <Header>
+    <From>
+      <Credential domain="NetworkID">
+        <Identity>AN01000000147</Identity>
+      </Credential>
+    </From>
+    <To>
+      <Credential domain="NetworkId">
+        <Identity>customerID</Identity>
+      </Credential>
+    </To>
+    <Sender>
+      <Credential domain="NetworkID">
+        <Identity>AN01000000147</Identity>
+        <SharedSecret>welcome</SharedSecret>
+      </Credential>
+      <UserAgent>BSD 8.12</UserAgent>
+    </Sender>
+  </Header>
+  <Request deploymentMode="production">
+    <ConfirmationRequest>
+      <ConfirmationHeader confirmID="" operation="new" type="detail" noticeDate="2012-09-04T02:37:49-05:00" invoiceID="623612976001">
+        <Contact role="shipTo" addressID="0170-74629-00">
+          <Name xml:lang="en-US">HOSPITAL BUILDING</Name>
+          <PostalAddress>
+            <DeliverTo>Yvonne Smith</DeliverTo>
+            <DeliverTo>541813031</DeliverTo>
+            <Street>3601 Mile Road</Street>
+            <Street>BUILDING: 0170-74629-00</Street>
+            <City>Royal Oak</City>
+            <State>MI</State>
+            <PostalCode>48073</PostalCode>
+            <Country isoCountryCode="US">United States</Country>
+          </PostalAddress>
+        </Contact>
+      </ConfirmationHeader>
+      <OrderReference orderID="400-2591453-0">
+        <DocumentReference payloadID="20120904023747.cXMLPurchaseOrder.984556224@eprosvcs.com"/>
+      </OrderReference>
+      <ConfirmationItem quantity="20" lineNumber="1">
+        <UnitOfMeasure>RM</UnitOfMeasure>
+        <ConfirmationStatus quantity="20" type="accept" shipmentDate="2012-09-05T12:00:00-05:00" deliveryDate="2012-09-05T12:00:00-05:00">
+          <UnitOfMeasure>RM</UnitOfMeasure>
+          <UnitPrice>
+            <Money currency="USD">4.44</Money>
+          </UnitPrice>
+          <Comments></Comments>
+          <Extrinsic name="SupplierPartID">751441</Extrinsic>
+        </ConfirmationStatus>
+      </ConfirmationItem>
+      <ConfirmationItem quantity="12" lineNumber="2">
+        <UnitOfMeasure>BX</UnitOfMeasure>
+        <ConfirmationStatus quantity="12" type="accept" shipmentDate="2012-09-05T12:00:00-05:00" deliveryDate="2012-09-05T12:00:00-05:00">
+          <UnitOfMeasure>BX</UnitOfMeasure>
+          <UnitPrice>
+            <Money currency="USD">1.52</Money>
+          </UnitPrice>
+          <Comments></Comments>
+          <Extrinsic name="SupplierPartID">429175</Extrinsic>
+        </ConfirmationStatus>
+      </ConfirmationItem>
+      <ConfirmationItem quantity="2" lineNumber="3">
+        <UnitOfMeasure>EA</UnitOfMeasure>
+        <ConfirmationStatus quantity="2" type="accept" shipmentDate="2012-09-05T12:00:00-05:00" deliveryDate="2012-09-05T12:00:00-05:00">
+          <UnitOfMeasure>EA</UnitOfMeasure>
+          <UnitPrice>
+            <Money currency="USD">4.14</Money>
+          </UnitPrice>
+          <Comments></Comments>
+          <Extrinsic name="SupplierPartID">908194</Extrinsic>
+        </ConfirmationStatus>
+      </ConfirmationItem>
+    </ConfirmationRequest>
+  </Request>
+</cXML>
