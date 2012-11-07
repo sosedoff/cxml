@@ -5,6 +5,8 @@ describe CXML::Status do
     it { should respond_to :code }
     it { should respond_to :text }
     it { should respond_to :xml_lang }
+    it { should respond_to :success? }
+    it { should respond_to :failure? }
   end
 
   describe '#initialize' do
@@ -38,6 +40,12 @@ describe CXML::Status do
       CXML::Status.new('code' => '400').success?.should be_false
       CXML::Status.new('code' => '475').success?.should be_false
       CXML::Status.new('code' => '500').success?.should be_false
+    end
+  end
+
+  describe '#failure?' do
+    it 'returns false on 2xx codes' do
+      CXML::Status.new('code' => '200').failure?.should be_false
     end
   end
 end
