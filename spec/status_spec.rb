@@ -1,6 +1,12 @@
 require 'spec_helper'
 
 describe CXML::Status do
+  describe 'instance' do
+    it { should respond_to :code }
+    it { should respond_to :text }
+    it { should respond_to :xml_lang }
+  end
+
   describe '#initialize' do
     it 'assigns attributes from string' do
       str = '<Status xml:lang="en-US" code="200" text="OK"></Status>'

@@ -4,7 +4,7 @@ module CXML
     attr_accessor :text
     attr_accessor :xml_lang
 
-    def initialize(data)
+    def initialize(data={})
       if data.kind_of?(String)
         data = CXML.parse(data)
       end
