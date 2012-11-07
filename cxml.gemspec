@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'simplecov', '~> 0.4'
 
   s.add_dependency 'nokogiri'
-  s.add_dependency 'xmlsimple'
+  s.add_dependency 'xml-simple'
   s.add_dependency 'hashr'
 
   s.files         = `git ls-files`.split("\n")
