@@ -24,4 +24,11 @@ describe CXML::Document do
       doc.response.should be_nil
     end
   end
+
+  describe '#render' do
+    it 'returns and xml result' do
+      doc = CXML::Document.new(parser.parse(fixture('envelope3.xml')))
+      expect { doc.render }.not_to raise_error
+    end
+  end
 end

@@ -30,5 +30,13 @@ module CXML
         end
       end
     end
+
+    def render
+      node = CXML.builder
+      node.cXML('version' => version, 'payloadID' => payload_id, 'timestamp' => timestamp.iso8601) do |doc|
+        doc.Header { |n| @header.render(n) }
+      end
+      node
+    end
   end
 end

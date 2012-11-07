@@ -1,6 +1,7 @@
 require 'cxml/version'
 require 'cxml/errors'
 require 'time'
+require 'nokogiri'
 
 module CXML
   autoload :Protocol,      'cxml/protocol'
@@ -16,5 +17,9 @@ module CXML
 
   def self.parse(str)
     CXML::Parser.new.parse(str)
+  end
+
+  def self.builder
+    Nokogiri::XML::Builder.new(:encoding => "UTF-8")
   end
 end

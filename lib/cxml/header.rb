@@ -29,5 +29,13 @@ module CXML
         @sender     = CXML::Sender.new(data['Sender'])
       end
     end
+
+    def render(node)
+      node.From   { |n| @from.render(n) }
+      node.To     { |n| @to.render(n) }
+
+      @sender.render(node)
+      node
+    end
   end
 end
