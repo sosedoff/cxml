@@ -5,9 +5,9 @@ Gem::Specification.new do |s|
   s.version     = CXML::VERSION
   s.summary     = "Ruby library to work with cXML protocol"
   s.description = "Ruby library to work with cXML protocol"
-  s.homepage    = "Project homepage"
-  s.authors     = ["Project author name"]
-  s.email       = ["Project author email"]
+  s.homepage    = "http://github.com/sosedoff/cxml"
+  s.authors     = ["Dan Sosedoff"]
+  s.email       = ["dan.sosedoff@gmail.com"]
   
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec',     '~> 2.11'
