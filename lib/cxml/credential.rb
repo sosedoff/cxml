@@ -38,5 +38,17 @@ module CXML
     attr_accessor :type
     attr_accessor :shared_secret
     attr_accessor :credential_mac
+    attr_accessor :identity
+
+    # Initialize a new Credential instance
+    # @param data [Hash] optional initial data
+    def initialize(data={})
+      if data.kind_of?(Hash) && !data.empty?
+        @domain        = data['domain']
+        @type          = data['type']
+        @identity      = data['Identity']
+        @shared_secret = data['SharedSecret']
+      end
+    end
   end
 end

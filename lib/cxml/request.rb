@@ -7,5 +7,12 @@ module CXML
   class Request
     attr_accessor :id
     attr_accessor :deployment_mode
+
+    def initialize(data={})
+      if data.kind_of?(Hash) && !data.empty?
+        @id = data['id']
+        @deployment_mode = data['deploymentMode']
+      end
+    end
   end
 end

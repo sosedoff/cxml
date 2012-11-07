@@ -21,6 +21,13 @@ module CXML
     attr_accessor :from
     attr_accessor :to
     attr_accessor :sender
-    attr_accessor :user_agent
+
+    def initialize(data={})
+      if data.kind_of?(Hash) && !data.empty?
+        @from       = CXML::Credential.new(data['From']['Credential'])
+        @to         = CXML::Credential.new(data['To']['Credential'])
+        @sender     = CXML::Sender.new(data['Sender'])
+      end
+    end
   end
 end

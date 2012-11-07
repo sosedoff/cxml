@@ -10,14 +10,18 @@ describe CXML::Document do
   describe '#parse' do
     it 'sets document attributes' do
       data = parser.parse(fixture('envelope3.xml'))
-      doc = CXML::Document.new
+      doc = nil
 
-      expect { doc.parse(data) }.not_to raise_error
+      expect { doc = CXML::Document.new(data) }.not_to raise_error
 
       doc.version.should eq(CXML::Protocol::VERSION)
       doc.payload_id.should_not be_nil
       doc.timestamp.should be_a Time
       doc.timestamp.iso8601.should eq('2012-09-04T02:37:49-05:00')
+
+      doc.header.should be_a CXML::Header
+      doc.request.should be_a CXML::Request
+      doc.response.should be_nil
     end
   end
 end
