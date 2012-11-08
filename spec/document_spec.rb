@@ -17,7 +17,7 @@ describe CXML::Document do
       doc.version.should eq(CXML::Protocol::VERSION)
       doc.payload_id.should_not be_nil
       doc.timestamp.should be_a Time
-      doc.timestamp.iso8601.should eq('2012-09-04T02:37:49-05:00')
+      doc.timestamp.should eq(Time.parse('2012-09-04T02:37:49-05:00'))
 
       doc.header.should be_a CXML::Header
       doc.request.should be_a CXML::Request
