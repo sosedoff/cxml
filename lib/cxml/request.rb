@@ -14,5 +14,9 @@ module CXML
         @deployment_mode = data['deploymentMode']
       end
     end
+
+    def render(node)
+      
+    end
   end
 end
