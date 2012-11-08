@@ -31,10 +31,30 @@ module CXML
       end
     end
 
+    def setup
+      @version    = CXML::Protocol.version
+      @timestamp  = Time.now.utc
+      @payload_id = "#{@timestamp.to_i}.process.#{Process.pid}@domain.com"
+    end
+
+    # Check if document is request
+    # @return [Boolean]
+    def request?
+      !request.nil?
+    end
+
+    # Check if document is a response
+    # @return [Boolean]
+    def response?
+      !response.nil?
+    end
+
     def render
       node = CXML.builder
       node.cXML('version' => version, 'payloadID' => payload_id, 'timestamp' => timestamp.iso8601) do |doc|
-        doc.Header { |n| @header.render(n) }
+        doc.Header { |n| @header.render(n) } if @header
+        @request.render(node) if @request
+        @response.render(node) if @response
       end
       node
     end

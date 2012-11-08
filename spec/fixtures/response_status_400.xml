@@ -1,0 +1,5 @@
+<cXML version="1.2.011" payloadID="1352382581000.process.454701738@domain.com" timestamp="2012-11-08T01:49:41-05:00">
+<Response>
+<Status code="400" text="java.lang.Exception: missing required parameter 'document'"/>
+</Response>
+</cXML>

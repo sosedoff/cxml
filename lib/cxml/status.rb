@@ -27,5 +27,9 @@ module CXML
     def failure?
       !success?
     end
+
+    def render(node)
+      node.Status(:code => @code, :text => @text)
+    end
   end
 end
